@@ -271,7 +271,8 @@ void EndDay()
 void EndWeek()
 {
     int daysToSkip = (SATURDAY - today + 1) % 8;
-    for (int i = 1; i <= daysToSkip; i++)
+    int i;
+    for (i = 1; i <= daysToSkip; i++)
     {
         EndDay();
     }
@@ -299,7 +300,8 @@ void EndMonth()
             daysToSkip = daysInMonth[month + 1];
         }
     }
-    for (int i = 1; i <= daysToSkip; i++)
+    int i;
+    for (i = 1; i <= daysToSkip; i++)
     {
         EndDay();
     }
@@ -316,7 +318,8 @@ void EndYear()
     {
         monthsToSkip++;
     }
-    for (int i = 1; i <= monthsToSkip; i++)
+    int i;
+    for (i = 1; i <= monthsToSkip; i++)
     {
         EndMonth();
     }
@@ -586,3 +589,4 @@ int main()
 
     return 0;
 }
+
